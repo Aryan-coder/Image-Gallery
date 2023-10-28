@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.unblur{
+  filter: blur(10px);
+  animation: unblur .5s forwards ease-in;
+}
+
+@keyframes unblur{
+  100%{filter: blur(0);}
+}
+
+.expand{
+  scale: .5;
+  opacity: .5;
+  animation: expand .3s forwards ease-in;
+}
+
+@keyframes expand{
+  100%{scale: 1; opacity: 1;}
+} 
+
+.shrink{
+  scale: 1;
+  opacity: 1;
+  animation: shrink .3s forwards ease-out;
+}
+
+@keyframes shrink{
+  100%{scale: .5; opacity: .5;}
+} 
+
+.fade-in{
+  opacity: 0;
+  transition: opacity .3s;
+  animation: fade-in .3s forwards ease-in;
+}
+
+@keyframes fade-in{
+  100%{opacity: 1;}
+} 
+
+.fade-out{
+  opacity: 1;
+  transition: opacity .3s;
+  animation: fade-out .3s forwards ease-in;
+}
+
+@keyframes fade-out{
+  100%{opacity: 0;}
+} 
+
+.center-photo{
+  object-fit: scale-down;
+}
